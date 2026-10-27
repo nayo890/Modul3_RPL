@@ -25,10 +25,10 @@ class AnggotaView(ctk.CTk):
             font=("Arial", 16, "bold")
         ).pack(pady=15)
 
-        # ID Anggota
+        # ID Anggota (Disabled / Readonly karena Auto Increment)
         self.entry_id = ctk.CTkEntry(
             self.frame_kiri,
-            placeholder_text="ID Anggota"
+            placeholder_text="ID Anggota (Otomatis)"
         )
         self.entry_id.pack(pady=10, padx=15, fill="x")
 
@@ -46,7 +46,7 @@ class AnggotaView(ctk.CTk):
         )
         self.entry_alamat.pack(pady=10, padx=15, fill="x")
 
-        # Tombol
+        # Tombol-tombol
         self.btn_simpan = ctk.CTkButton(
             self.frame_kiri,
             text="Simpan Data",
@@ -99,24 +99,3 @@ class AnggotaView(ctk.CTk):
         self.tabel.column("alamat", width=220)
 
         self.tabel.pack(fill="both", expand=True, padx=15, pady=10)
-
-        # ==========================================
-        # DATA ANGGOTA
-        # ==========================================
-        data_anggota = [
-            ("001", "Naila", "Jl. sekunder"),
-            ("002", "Nurul", "Jl. Lapatta"),
-            ("003", "Inayah", "Jl. Sutomo"),
-            ("004", "Noel", "Jl. Dewi Sartika"),
-            ("005", "Lathifah", "Jl. Kijang")
-        ]
-
-        # Memasukkan data ke tabel
-        for data in data_anggota:
-            self.tabel.insert("", "end", values=data)
-
-
-# Menjalankan aplikasi
-if __name__ == "__main__":
-    app = AnggotaView()
-    app.mainloop()

@@ -1,9 +1,6 @@
-#Naila Nurul Lathifah_F5212510010
+from controllers.buku_controller import BukuController
+from controllers.anggota_controller import AnggotaController
 
-print("=== Kalkulator Terminal Modul 3 ===")
-angka1 = float(input("Masukkan angka pertama: "))
-angka2 = float(input("Masukkan angka kedua: "))
-hasil = angka1 + angka2
-
-print(f"Status: Setup Berhasil!")
-print(f"Hasil Penjumlahan: {hasil}")
+if __name__ == "__main__":
+    app = AnggotaController()
+    app.run()
