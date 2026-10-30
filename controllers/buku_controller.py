@@ -24,7 +24,7 @@ class BukuController:
         # OTORISASI: Hanya nonaktifkan tombol Update dan Delete jika bukan admin
         if self.user_role != "admin":
             self.view.btn_update.configure(state="disabled", text="Update (Khusus Admin)")
-            self.view.btn_delete.configure(state="disabled", text="Hapus (Khusus Admin)")
+            self.view.btn_delete.configure(state="disabled", text="Hapus (Khusus admmin)")
 
         self.muat_data_tabel()
 

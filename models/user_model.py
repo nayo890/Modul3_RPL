@@ -27,10 +27,6 @@ class UserModel:
         return None
 
     def register_user(self, username, password, role="user"):
-        """
-        Menambahkan user baru ke database dengan password ter-hash SHA-256.
-        Mengembalikan True jika berhasil, False jika gagal.
-        """
         if self.conn:
             cursor = self.conn.cursor()
             password_hash = self.hash_password(password)
